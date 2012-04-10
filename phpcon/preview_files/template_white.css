@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* template White */
+.headerSub {
+	background-color: #FFFFFF;
+}
+.headerSub h1 {
+	color: #333333;
+}
+.headerSub .eventDate {
+	color: #333333;
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #AAAAAA;
+}
+.headerSub .eventDate select {
+	color: #333333;
+	background-color: #FFFFFF;
+}
+.headerSub .eventDate .bdSeparated {
+	border-left: 1px solid #EEEEEE;
+}

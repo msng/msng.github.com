@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@media print {  .gmnoprint {    display:none  }}@media screen {  .gmnoscreen {    display:none  }}</style>
+<meta charset="utf-8">
+<title>イベントのプレビュー | イベントアテンド [ATND] でイベント作成・チケット販売・参加者の出欠管理</title>
+<meta name="description" content="イベントのプレビュー画面です。イベントアテンド [ATND] はライブ、勉強会・セミナーやパーティーの開催情報を多数掲載！Twitter へのつぶやき、Facebook の「いいね！」で広めよう。">
+<meta name="keywords" content="イベント,出欠管理,勉強会,セミナー">
+<link rel="stylesheet" href="preview_files/common.css">
+<link rel="stylesheet" href="preview_files/general.css">
+<link rel="stylesheet" href="preview_files/template_white.css">
+<link rel="stylesheet" href="preview_files/event_detail_add.css">
+<!--[if IE]><script src="/js/html5.js"></script><![endif]-->
+<script type="text/javascript" src="preview_files/jsapi.js"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script><script src="preview_files/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="preview_files/js.js"></script><script src="preview_files/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="preview_files/uw3002.js"></script>
+<script type="text/javascript">
+$(function() {
+	var mapdiv = document.getElementById("map_canvas");
+	var geocoder = new google.maps.Geocoder();
+	var adr = '大阪府大阪市中央区本町1-4-5';
+	var encodeAddress =  '%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9C%AC%E7%94%BA1-4-5';
+	geocoder.geocode({'address': adr},function(results,status){
+		if (status == google.maps.GeocoderStatus.OK) {
+			var latlng = results[0].geometry.location;
+			var myOptions = {
+					zoom: 16,
+					center: latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					scaleControl: true
+			};
+			var map = new google.maps.Map(mapdiv, myOptions);
+			var marker = new google.maps.Marker({
+				position: latlng,
+				map: map,
+				draggable: true
+			});
+			var p = marker.position;
+			var lat = p.lat();
+			var lng = p.lng();
+			document.getElementById("googlemaplink").href="http://maps.google.co.jp/maps?f=q&q="+encodeAddress+"&hl=ja&ll="+lat+","+lng+"&t=m&z=16";
+			map.setCenter(results[0].geometry.location);
+			marker.setPosition(results[0].geometry.location);
+		};
+	});
+});
+
+</script>
+
+<style type="text/css">
+#map_canvas {
+  width: 260px;
+  height: 140px;
+  frameborder: 0;
+  scrolling: no;
+  marginheight: 0;
+  marginwidth: 0;
+}
+</style>
+<script src="preview_files/commonutilgeocoder.js" charset="UTF-8" type="text/javascript"></script><script src="preview_files/statsmapmarker.js" charset="UTF-8" type="text/javascript"></script><script src="preview_files/onion.js" charset="UTF-8" type="text/javascript"></script><script src="preview_files/controls.js" charset="UTF-8" type="text/javascript"></script></head>
+<body id="pageTop" data-twttr-rendered="true"><script src="preview_files/706728584.js" type="text/javascript"></script>
+<form name="event_previewActionForm" method="post" action="/event/preview/"><input name="event" value="" type="hidden"><input name="eventDate" value="&amp;nbsp;" type="hidden"><input name="eventStatus" value="&amp;nbsp;" type="hidden"><input name="event0" value="6454" type="hidden"><input name="event0Date" value="04/11 (水) 07:30～05/07 (月) 17:30" type="hidden"><input name="event0Status" value="販売中" type="hidden"><div class="wrapper">
+<header class="header">
+		<div class="spHeaderInner">
+			<p class="fs26">この画面はプレビューです<span class="ml20 fs14"><a href="#" onclick="window.close()">[ 閉じる ]</a></span></p>
+		</div>
+	</header>
+		<div class="headerSub pt60">
+			<div class="headerSubInner">
+			<h1 class="fs30 lh40">PHP カンファレンス関西2012 懇親会</h1>
+				<div class="cf eventDate">
+					<div class="fl mt5 mr20">
+						<p><img src="preview_files/icon_open_date.png" alt="開催日時"></p>
+					</div>
+					<div class="fl mr20">
+						<p class="fs14 mbn10">2012</p>
+							<p class="fs28"><span class="b">05/12</span>
+							<span class="fs14 b">(土)</span>17:30</p>
+						</div>
+						<div class="fl mt20 mr15">
+							<p class="fs20 fgLGray ofh"><span class="mln10">◆</span></p>
+						</div>
+						<div class="fl">
+							<p class="fs14 mbn10">2012</p>
+							<p class="fs28"><span class="b">05/12</span>
+							<span class="fs14 b">(土)</span>20:30</p>
+						</div>
+						<div class="fr pt5 pb5 w295 bdLBGrayL">
+							<a href="#ticketLink" class="btnDisable btnApplyTicket bac ol"></a></div>
+					</div>
+			</div>
+		</div>
+	
+	<article>
+		<div class="contents">
+		<div class="cf mb60">
+			<div class="contentsMain fl">
+<section class="mb30"><h3 class="ttlEventInfo">イベント情報</h3>
+				PHPカンファレンス関西2012の懇親会です。<br>カンファレンスと同じ大阪産業創造館で開催します。<br><br>スピーカーや他の参加者と語らい、親交を深めるチャンス。<br>ぜひご参加ください。<br><br>【日時】2012年5月12日(土) 17:30から<br>【定員】130人<br>【参加費】4,000円<br>クレジットカードかコンビニ払いをお選びいただけます。<br>コンビニ払いの場合は手数料315円をご負担ください。<br></section>
+		<section class="mb30"><a name="ticketLink"></a>
+			<h2 class="ttlTicketInfo">チケット</h2>
+				<p class="mb10">
+					</p>
+				<table class="tblTicket">
+					<tbody>
+						<tr>
+									<td class="w330 bgGray">
+										<p class="pb5 b">参加費</p>
+										<p class="bdDotLBlackT pt5" id="date6454">
+											04/11(水)07:30～05/07(月)17:30までお申込みが可能です。
+											</p>
+									</td>
+									<td>
+										<p class="arrow">
+											<span>◆</span>
+										</p>
+									</td>
+									<td class="w150 bgDOrange">
+											<div id="status6454">
+														<p class="pb15 mb15 bdDotLBlackB">
+															<a href="javascript:void(0);" class="btn btnApplyEventS ol bac"></a></p>
+													</div>
+												<p class="fs30 lh30 b tac">¥4,000</p>
+											</td>
+								</tr>
+								<tr>
+									<td class="spacer" colspan="3"><img alt="" src="preview_files/spacer.gif" height="10"></td>
+								</tr>
+								</tbody>
+				</table>
+			<p class="b fgRed mt5">※コンビニでのお支払いは、受付終了日時の 5日前に締め切られます</p>
+			</section>
+		<p>
+					<a href="#pageTop" class="btn btnTop ol bar">↑</a></p>
+		</div>
+		<div class="contentsSide fr">
+			<section class="mb30">
+				<div class="bgGray bdWhite p10"><p><img src="preview_files/216990526972480_4d11d817.png" width="100%"></p></div>
+				</section>
+			<section class="mb30">
+				<h3 class="ttlPlaceInfo">開催場所</h3>
+					<div style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden;" class="mb10" id="map_canvas"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;"><div style="z-index: 100; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -50px; top: -130px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -50px; top: 126px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -306px; top: -130px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -306px; top: 126px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 206px; top: -130px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 206px; top: 126px;"></div></div></div></div><div style="z-index: 101; position: absolute; left: 0px; top: 0px;"></div><div style="z-index: 102; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -50px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -50px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -306px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -306px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 206px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 206px; top: 126px;"></div></div></div><div style="width: 37px; height: 34px; overflow: hidden; position: absolute; left: 120px; top: 36px; z-index: 70;"><img src="preview_files/marker_sprite.png" style="position: absolute; left: -20px; top: 0px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 57px; height: 34px;"></div></div><div style="z-index: 103; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -50px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -50px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -306px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -306px; top: 126px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 206px; top: -130px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 206px; top: 126px;"></div></div></div><div style="width: 20px; height: 34px; overflow: hidden; position: absolute; left: 120px; top: 36px; z-index: 70;"><img src="preview_files/marker_sprite.png" style="position: absolute; left: 0px; top: 0px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 57px; height: 34px;"></div></div><div style="z-index: 104; position: absolute; left: 0px; top: 0px;"></div><div style="z-index: 105; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" style="width: 20px; height: 34px; overflow: hidden; position: absolute; left: 120px; top: 36px; z-index: 70; opacity: 0.01;"><img usemap="#gmimap0" src="preview_files/marker_sprite.png" style="position: absolute; left: 0px; top: 0px; width: 20px; height: 34px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"><map id="gmimap0" name="gmimap0"><area style="cursor: pointer;" title="" shape="poly" coords="9,0,6,1,4,2,2,4,0,8,0,12,1,14,2,16,5,19,7,23,8,26,9,30,9,34,11,34,11,30,12,26,13,24,14,21,16,18,18,16,20,12,20,8,18,4,16,2,15,1,13,0" log="miw"></map></div></div><div style="z-index: 106; position: absolute; left: 0px; top: 0px;"><div style="display: none;"><div style="width: 107px; height: 137px; overflow: hidden; position: absolute; left: 21px; top: 26px;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -784px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"><div style="position: absolute; left: 7px; top: 5px; width: 94px; height: 75px; background-color: rgb(211, 211, 211); z-index: 1;"></div><div style="width: 95px; bottom: 38px; z-index: 1; left: 7px; font-family: Arial,sans-serif; font-size: 9px; color: gray; background-color: white; position: absolute;">読み込んでいます...</div><img src="preview_files/transparent.png" style="position: absolute; left: 7px; top: 5px; width: 94px; height: 75px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; opacity: 0.25;"></div><div style="width: 21px; height: 26px; overflow: hidden; position: absolute; left: 63px; top: 127px;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -441px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 260px; height: 140px;"><img src="preview_files/StaticMapService.png" style="width: 260px; height: 140px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: -50px; top: 126px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt_003.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -306px; top: 126px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt_006.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -50px; top: -130px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt_005.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -306px; top: -130px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt_004.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 206px; top: -130px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt_002.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 206px; top: 126px; opacity: 1; -moz-transition: opacity 200ms ease-out 0s;"><img src="preview_files/vt.png" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div></div></div></div><div style="margin: 2px 5px 2px 2px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a href="http://maps.google.com/maps?ll=34.6839,135.509234&amp;z=16&amp;t=m&amp;hl=ja" target="_blank" title="クリックすると Google マップでこの地域を表示します" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 24px; cursor: pointer;"><img src="preview_files/google_white.png" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 24px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></a></div><div style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px;" class="gmnoprint"><div style="height: 19px; -moz-user-select: none; line-height: 19px; padding-right: 2px; padding-left: 50px; background: -moz-linear-gradient(left center , rgba(255, 255, 255, 0) 0pt, rgba(255, 255, 255, 0.5) 50px) repeat scroll 0% 0% transparent; font-family: Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer; display: none;">地図データ</a><span style="">地図データ ©2012 ZENRIN</span><span style=""> - </span><a target="_blank" href="http://www.google.com/intl/ja_US/help/terms_maps.html" style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer;">利用規約</a></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Arial,sans-serif; color: rgb(34, 34, 34); box-shadow: 0pt 4px 16px rgba(0, 0, 0, 0.2); z-index: 10000002; display: none; width: 206px; height: 98px; position: absolute; left: 5px; top: 5px;"><div style="padding: 0pt 0pt 10px; font-size: 16px;">地図データ</div><div style="font-size: 13px;">地図データ ©2012 ZENRIN</div><div style="width: 10px; height: 10px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="preview_files/imgs8.png" style="position: absolute; left: -18px; top: -44px; width: 68px; height: 67px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; right: 0px; bottom: 0px;" class="gmnoscreen"><div style="font-family: Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">地図データ ©2012 ZENRIN</div></div><div class="gmnoprint" style="display: none; font-size: 10px; height: 17px; background-color: rgb(245, 245, 245); border: 1px solid rgb(220, 220, 220); line-height: 19px; position: absolute; right: 0px; bottom: 0px;"><a href="http://maps.google.com/maps?ll=34.6839,135.509234&amp;z=16&amp;t=m&amp;hl=ja&amp;skstate=action:rmi_dialog$apiref:1$location:34.6839,135.509234" style="font-family: Arial,sans-serif; font-size: 85%; font-weight: bold; padding: 1px 3px; color: rgb(68, 68, 68); text-decoration: none; position: relative; bottom: 1px;" title="Google に地図や画像のエラーを報告する" target="_new">地図の誤りを報告する</a></div><div style="margin-bottom: 3px; -moz-user-select: none; width: 106px; height: 26px; color: rgb(0, 0, 0); font-family: Arial,sans-serif; font-size: 11px; position: absolute; left: 69px; bottom: 0px;"><div style="width: 4px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: 0px; top: -398px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 59px; height: 492px;"></div><div style="width: 102px; height: 4px; overflow: hidden; position: absolute; left: 3px; top: 11px;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: 0px; top: -424px; width: 102px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="position: absolute; left: 0px; top: 11px; width: 1px; height: 4px; overflow: hidden;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: 0px; top: -398px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 59px; height: 492px;"></div><div class="gmnoprint" style="position: absolute; left: 0px; top: 11px; width: 1px; height: 4px; overflow: hidden; right: 0px;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: 0px; top: -398px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 59px; height: 492px;"></div><div style="width: 4px; height: 12px; overflow: hidden; position: absolute; left: 102px; top: 0px;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: -4px; top: -398px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 59px; height: 492px;"></div><div style="width: 4px; height: 12px; overflow: hidden; position: absolute; left: 78px; top: 14px;"><img src="preview_files/mapcontrols3d6.png" style="position: absolute; left: -8px; top: -398px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 59px; height: 492px;"></div><div style="position: absolute; left: 8px; bottom: 15px; direction: ltr;">200 m</div><div style="position: absolute; left: 8px; top: 15px; direction: ltr;">500 ft</div></div><div controlheight="84" controlwidth="32" style="margin: 5px; -moz-user-select: none; position: absolute; left: 0px; top: 0px;" class="gmnoprint"><div controlheight="40" controlwidth="32" style="cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; position: absolute; left: 0px; top: 0px;"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -9px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -107px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -58px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="preview_files/cb_scout_sprite_api_003.png" style="position: absolute; left: -205px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 1029px; height: 255px;"></div></div><div controlheight="0" controlwidth="0" style="opacity: 0.6; display: none; position: absolute;" class="gmnoprint"><img title="地図を 90 度回転する" style="-moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; cursor: pointer; width: 22px; height: 22px;" src="preview_files/rotate2.png"></div><div style="position: absolute; left: 5px; top: 45px;" controlheight="39" controlwidth="22" class="gmnoprint"><img src="preview_files/szc4.png" style="width: 22px; height: 39px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"><div title="ズームイン" style="position: absolute; left: 0px; top: 0px; width: 22px; height: 17px; cursor: pointer;"></div><div title="ズームアウト" style="position: absolute; left: 0px; top: 18px; width: 22px; height: 17px; cursor: pointer;"></div></div></div><div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;" class="gmnoprint"><div title="地図のスタイルを変更" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 1px 6px; border: 1px solid rgb(113, 123, 135); box-shadow: 0pt 2px 4px rgba(0, 0, 0, 0.4); font-weight: bold;">地図<img style="-moz-user-select: none; border: 0px none; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;" src="preview_files/arrow-down.png"></div><div style="background-color: white; z-index: -1; padding-top: 2px; border-width: 0pt 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(113, 123, 135) rgb(113, 123, 135); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; box-shadow: 0pt 2px 4px rgba(0, 0, 0, 0.4); position: relative; text-align: left; display: none;"><div title="市街地図を見る" style="color: black; font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background-color: rgb(255, 255, 255); padding: 2px 5px 3px; font-weight: bold;">地図</div><div title="航空写真を見る" style="color: black; font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background-color: rgb(255, 255, 255); padding: 2px 5px 3px;">航空写真</div><div style="margin: 1px 0pt; border-top: 1px solid rgb(235, 235, 235);"></div><div title="地形を見るにはズームアウトしてください" style="color: rgb(184, 184, 184); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 8px 3px 5px; direction: ltr; text-align: left; white-space: nowrap;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(241, 241, 241); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; box-shadow: none; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="preview_files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">地形</label></div><div style="margin: 1px 0pt; border-top: 1px solid rgb(235, 235, 235); display: none;"></div><div title="45 度の角度から見るにはズームインしてください" style="color: rgb(184, 184, 184); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 8px 3px 5px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(241, 241, 241); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; box-shadow: none; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="preview_files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div title="航空写真に道路名を表示" style="color: rgb(0, 0, 0); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 8px 3px 5px; direction: ltr; text-align: left; white-space: nowrap; display: none;"><span style="position: relative; line-height: 0; font-size: 0pt; margin: 0pt 5px 0pt 0pt; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px 1px 1px 1px; width: 13px; height: 13px; box-shadow: none; vertical-align: middle;" role="checkbox"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="preview_files/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">ラベル</label></div></div></div></div></div>
+				<div>
+					<p class="mb5"><a id="googlemaplink" href="http://maps.google.co.jp/maps?f=q&amp;q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9C%AC%E7%94%BA1-4-5&amp;hl=ja&amp;ll=34.6839,135.50923420000004&amp;t=m&amp;z=16" target="_blank">大きな地図で見る</a></p>
+					<dl class="cstPlaceInfo">
+						<dt>開催場所&nbsp;：&nbsp;</dt>
+						<dd>
+							〒541-0053<br>大阪府大阪市中央区本町1-4-5<br>大阪産業創造館イベントホール</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="mb30">
+			<h3 class="ttlDateInfo">開催日時</h3>
+				<div class="cf eventDateSide">
+					<div class="fl mr20">
+						<p class="fs14">2012</p>
+							<p class="fs26 lh24 bdLBGray">
+								<span class="b">05/12</span>
+								<span class="fs14 b">(土)</span>
+							</p>
+							<p class="fs26 lh24">17:30</p>
+						</div>
+					<p class="arrow fs20 fgLGray ofh"><span class="mln10">◆</span></p>
+					<div class="fr">
+						<p class="fs14">2012</p>
+						<p class="fs26 lh24 bdLBGray">
+							<span class="b">05/12</span>
+							<span class="fs14 b">(土)</span>
+						</p>
+						<p class="fs26 lh24">20:30</p>
+					</div>
+				</div>
+			</section>
+			<section class="mb30">
+				<h3 class="ttlShareLink">シェアリンク</h3>
+				<ul class="cf mt10 snsList">
+				<img src="preview_files/btn_social.png">
+				</ul>
+			</section>
+			<section class="mb30">
+				<h3 class="ttlPromoterInfo">主催者情報</h3>
+					<div class="cf mb30">
+
+<div class="fl mr30">
+								<p><img src="preview_files/icon_noimage_l.png" alt="主催者画像" height="60" width="60"></p>
+									</div>
+							<div class="fl">
+								<p class="fs14 fgDOrange b mb5"><a href="https://atnd.org/event/profile/">関西PHPユーザーズグループ</a></p>
+									<p>0671737122</p>
+								</div>
+						</div>
+				<p class="fgRed b">【※注意※】当イベントは主催者によって企画、運営され株式会社リクルートは関与しておりません。</p>
+			</section>
+
+			<section class="mb30">
+				</section>
+
+		</div>
+	</div>
+	<div class="mb60 pt60 bdLGrayT ofh pr">
+		<p class="clickArrow">◆</p>
+		<p>
+			<a href="#ticketLink" class="btnDisable btnApplyTicketL bac ol"></a></p>
+	</div>
+	</div>
+	</article>
+
+	<footer class="footer bdLBlackT">
+	<div class="footerCorporate">
+		<section class="footerCorporateInner">
+			<ul class="footerCorporateLinks">
+					<li><a href="http://atnd.org/doc/legal.html" target="cancel">特定商取引法に基づく表記</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/privacy.html" target="privacy">プライバシーポリシー</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/atnd_term.html" target="atnd_term">利用規約</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/event_term.html" target="event_term">イベント主催者規約</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/ticket_term.html" target="ticket_term">イベント参加者規約</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/guide.html" target="faq">ご利用ガイド</a>&nbsp;｜</li>
+					<li><a href="http://atnd.org/doc/contact.html" target="contact">サイトに関するお問い合わせ</a></li>
+				</ul>
+			<p class="copyright"><small><img src="preview_files/foot_copyright.gif" alt="リクルート"></small></p>
+		</section>
+	</div>
+</footer></div>
+<script src="preview_files/jquery-1.js"></script>
+<script language="JavaScript" type="text/javascript" src="preview_files/s_code.js"></script><script type="text/javascript">
+<!--
+s.pageName = 'event_preview';
+s.channel = 'event_edit';
+s.prop15 = s.eVar15 = '';
+s.prop19 = s.eVar19 = '';
+s.prop25 = s.eVar25 = '';
+var s_code=s.t();if(s_code)document.write(s_code);
+// -->
+</script><!-- ADNETWORK by RAO リターゲタグ配信用 開始 -->
+<script type="text/javascript">
+document.writeln('<sc'+'ript language="JavaScript" type="text/javascript" src="'+location.protocol+'//cdn.c-team.jp/ran/r/atnd/atnd.js"></sc'+'ript>');
+</script><script language="JavaScript" type="text/javascript" src="preview_files/atnd.js"></script><script type="text/javascript" src="preview_files/ako.js" charset="ISO-8859-1"></script>
+<script type="text/javascript" src="preview_files/rhnd.js"></script><script language="JavaScript" type="text/javascript" src="preview_files/s_rst_B10871_10358.js"></script><img src="preview_files/activity.gif" alt="" border="0" height="1" width="1"><img src="preview_files/bl_track.gif"><img style="border-style: none;" alt="" src="preview_files/a.gif" height="1" width="1">
+
+<!-- ADNETWORK by RAO リターゲタグ配信用 終了 --></form>
+</body></html>
