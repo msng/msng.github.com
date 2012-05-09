@@ -1,0 +1,73 @@
+@linkColor: #33F;
+@textReversed: #FFF;
+
+a {
+  color: @linkColor;
+}
+
+a:hover {
+  background-color: @linkColor;
+  color: @textReversed;
+}
+
+article header h1 {
+  color: darken(#F00, 20%); 
+}
+
+.round (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.gray-round (@radius) {
+  border: 1px solid #999;
+  .round(@radius);
+}
+
+#content {
+  float: left;
+  width: 300px;
+
+  article {
+    .gray-round(20px);
+
+    header {
+      border-bottom: 1px solid #999;
+
+      time {
+        font-size: smaller;
+      }
+    }
+  }
+}
+
+nav {
+  float: left;
+  width: 200px;
+}
+
+.tbColor (@c) {
+  color: @c;
+}
+.tbColor (@c) when (lightness(@c) < 50%) {
+  background-color: #EEE; 
+}
+.tbColor (@c) when (lightness(@c) >= 50%) {
+  background-color: #111;
+}
+
+footer {
+  clear: both;
+
+}
+
+footer p.darkText {
+  clear: both;
+  .tbColor(#333);
+}
+
+footer p.lightText {
+  clear: both;
+  .tbColor(#CCC);
+}

@@ -1,0 +1,86 @@
+body {
+	width: 940px;
+}
+
+h1 {
+	margin: 0 0 10px;
+}
+
+a, a:visited {
+	color: #00C;
+}
+
+.navbar {
+	background-color: #eee;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.brand {
+	font-size: 2em;
+}
+
+.nav {
+	float: left;
+}
+
+.navbar .nav li {
+	display: inline;
+	margin-right: 15px;
+}
+
+.dropdown-menu {
+	display: none;
+}
+
+form.pull-right {
+	float: right;
+}
+
+.row {
+	overflow: hidden;
+}
+
+.span3 {
+	width: 240px;
+	float: left;
+}
+
+.span9 {
+	width: 690px;
+	float: left;
+}
+
+#orelink {
+	display: none;
+}
+
+#orelist {
+	margin: 0;
+}
+
+.alert {
+	overflow: hidden;
+	border: 1px solid #F00;
+	background-color: #FEE;
+	padding: 10px;
+}
+
+.alert a.close {
+	display: none;
+	float: right;
+}
+
+.alert h4 {
+	margin: 0;
+}
+
+.pagination li {
+	display: inline;
+	margin-right: 10px;
+}
+.pagination li:after {
+	content: "|";
+	margin-left: 10px;
+}
+

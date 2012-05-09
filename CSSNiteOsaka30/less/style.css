@@ -1,0 +1,43 @@
+a {
+  color: #3333ff;
+}
+a:hover {
+  background-color: #3333ff;
+  color: #ffffff;
+}
+article header h1 {
+  color: #990000;
+}
+#content {
+  float: left;
+  width: 300px;
+}
+#content article {
+  border: 1px solid #999;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+#content article header {
+  border-bottom: 1px solid #999;
+}
+#content article header time {
+  font-size: smaller;
+}
+nav {
+  float: left;
+  width: 200px;
+}
+footer {
+  clear: both;
+}
+footer p.darkText {
+  clear: both;
+  color: #333333;
+  background-color: #EEE;
+}
+footer p.lightText {
+  clear: both;
+  color: #cccccc;
+  background-color: #111;
+}
